@@ -33,6 +33,7 @@
         <version.jmock>2.6.0-RC2</version.jmock>
         <version.spring>4.2.5.RELEASE</version.spring>
         <version.ali-druid>1.0.13</version.ali-druid>
+        <spring-cloud.version>Dalston.SR1</spring-cloud.version>
     </properties>
 
     <!--<dependencyManagement>-->
@@ -45,7 +46,30 @@
         <!--</dependencies>-->
     <!--</dependencyManagement>-->
 
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
     <dependencies>
+        <!-- eureka client -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-eureka</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
             <artifactId>mybatis-spring-boot-starter</artifactId>

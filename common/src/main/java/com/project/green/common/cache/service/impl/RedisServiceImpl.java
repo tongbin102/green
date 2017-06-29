@@ -13,7 +13,7 @@ import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 @Service
-public class RedisServiceImpl implements RedisService{
+public class RedisServiceImpl implements RedisService {
   
     @Autowired
     private StringRedisTemplate redisTemplate;
